@@ -1,0 +1,36 @@
+// COLORS
+$color-primary: #f1cdb3;
+$color-primary-light: #fddcc4;
+
+$color-light-xl: #ffffff;
+$color-light-s: #fafafa;
+$color-light-l: #f6f6f6;
+
+$color-dark-3xl: #292929;
+$color-dark-l: #545454;
+$color-dark-s: #cdcdcd;
+$color-dark-m: #b2b2b2;
+
+$gradient-bg: radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+
+// __container paddings
+$container-padding-left: 15px;
+$container-padding-right: 15px;
+$container-padding: $container-padding-left + $container-padding-right;
+
+// MEDIA-BREAKPOINTS
+$breakpoint-1200: 1200px;
+$breakpoint-768: 768px;
+$breakpoint-500: 500px;
+$breakpoint-330: 330px;
+
+// __container max-width
+$container-1200: $breakpoint-1200 + $container-padding;
+$container-768: $breakpoint-768 - $container-padding;
+$container-500: $breakpoint-500 - $container-padding;
+$container-330: $breakpoint-330 - $container-padding;
+
+// ANIMATION
+$carousel-animation-duration: 1000ms;
+$navbar-animation-duration: 500ms;
+$popup-animation-duration: 500ms;

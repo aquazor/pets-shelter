@@ -1,0 +1,68 @@
+.help {
+  h3 {
+    max-width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  --main-gap: 2rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem var(--main-gap, 2rem);
+    margin-top: 3.75rem;
+  }
+
+  &__item {
+    flex: 0 0 calc(20% - var(--main-gap, 2rem));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    p {
+      min-width: max-content;
+      @include georgia-r;
+      font-size: 1.25rem;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.15;
+      letter-spacing: 1.2px;
+      color: $color-dark-l;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet-768 {
+  .help {
+    &__list {
+      gap: 3.5rem 0;
+    }
+
+    &__item {
+      flex-basis: 33.333%;
+    }
+  }
+}
+
+@include mobile-500 {
+  .help {
+    &__list {
+      margin-top: 2.625rem;
+      justify-content: flex-start;
+      gap: 1.875rem 0;
+    }
+
+    &__item {
+      flex-basis: 50%;
+    }
+  }
+}

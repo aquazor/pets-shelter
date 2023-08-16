@@ -1,0 +1,142 @@
+.our-pets {
+  background-color: $color-light-l;
+
+  h3 {
+    margin: 0 auto;
+    max-width: 25rem;
+    text-align: center;
+  }
+}
+
+.pagination {
+  margin-top: 3.75rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 0;
+  }
+
+  &__btn,
+  &__active-page {
+    min-width: 52px;
+    min-height: 52px;
+    border-radius: 50%;
+    border: 2px solid $color-primary;
+    transition: all 200ms;
+  }
+
+  &__active-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    cursor: default;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 2.5rem;
+    gap: 1.25rem;
+  }
+
+  &__btn,
+  &__active-page {
+    @include georgia-r;
+    font-size: 20px;
+    line-height: 115%;
+    color: $color-dark-3xl;
+
+    &:disabled {
+      border-color: $color-dark-s;
+      color: $color-dark-s;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.card-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  border-radius: 9px;
+  background-color: $color-light-s;
+  cursor: pointer;
+  transition: all 300ms;
+
+  &__pet-image img {
+    max-width: unset;
+  }
+
+  &__pet-name {
+    @include georgia-r;
+    font-size: 1.25rem;
+    letter-spacing: 1.2px;
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-bottom: 1.875rem;
+    line-height: 1.06;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+  }
+}
+
+@media (hover: hover) {
+  .our-pets {
+    &__btn:hover {
+      background-color: $color-primary-light;
+    }
+  }
+
+  .pagination {
+    &__btn:not(:disabled):hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+
+  .card-pagination:hover {
+    background-color: $color-light-xl;
+
+    .card-pagination__btn {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .pagination {
+    &__block {
+      justify-content: center;
+      column-gap: 40px;
+    }
+  }
+}
+
+@include tablet-768 {
+  .pagination {
+    margin-top: 1.875rem;
+  }
+}
+
+@include mobile-500 {
+  .pagination {
+    margin-top: 2.5rem;
+
+    &__buttons {
+      gap: 0.625rem;
+    }
+  }
+}

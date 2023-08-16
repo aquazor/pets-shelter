@@ -1,0 +1,98 @@
+.donation {
+  background-color: $color-light-l;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  &__content {
+    max-width: 23.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    h3 {
+      max-width: 18.75rem;
+    }
+
+    p {
+      @include arial-i;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: $color-dark-m;
+    }
+  }
+
+  &__btn {
+    width: 350px;
+    padding: 0.625rem 0.9375rem;
+    position: relative;
+    text-align: right;
+    background-color: $color-primary;
+    border-radius: 9px;
+    transition: background-color 200ms;
+    @include georgia-r;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 1.2px;
+    color: $color-dark-l;
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0.9375rem;
+      width: 30px;
+      height: 23px;
+      background: url(../img/icons/credit-card.svg) no-repeat center;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .donation {
+    &__btn:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}
+
+@include tablet-768 {
+  .donation {
+    &__container {
+      flex-direction: column;
+      gap: 3.75rem;
+    }
+
+    &__puppy {
+      order: 2;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@include mobile-500 {
+  .donation {
+    &__content {
+      max-width: 19rem;
+      align-items: center;
+
+      h5 {
+        letter-spacing: normal;
+      }
+    }
+
+    &__btn {
+      width: 280px;
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// @mixin desktop-1280() {
+//   @media all and (max-width: $breakpoint-1280) {
+//     @content;
+//   }
+// }
+
+@mixin tablet-768() {
+  @media all and (max-width: $breakpoint-768) {
+    @content;
+  }
+}
+
+@mixin mobile-500() {
+  @media all and (max-width: $breakpoint-500) {
+    @content;
+  }
+}

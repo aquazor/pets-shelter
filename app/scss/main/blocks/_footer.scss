@@ -1,0 +1,61 @@
+.footer {
+  padding-top: 3.75rem;
+  background: url(../img/start-screen-noise-bg.png), $gradient-bg;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem 1rem;
+  }
+
+  h3 {
+    color: $color-light-xl;
+  }
+
+  h4 {
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    a {
+      display: block;
+      color: $color-primary;
+      transition: color 200ms;
+    }
+  }
+
+  &__contacts,
+  &__location {
+    min-width: 18.75rem;
+    max-width: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-bottom: 5%;
+  }
+
+  &__puppy {
+    align-self: flex-end;
+  }
+}
+
+@media (hover: hover) {
+  .footer {
+    a:hover {
+      color: $color-primary-light;
+    }
+  }
+}
+
+@include tablet-768 {
+  .footer {
+    padding-top: 1.875rem;
+
+    &__container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 2rem;
+    }
+  }
+}

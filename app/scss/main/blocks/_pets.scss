@@ -1,0 +1,245 @@
+.pets {
+  background-color: $color-light-l;
+
+  h3,
+  &__btn {
+    margin: 0 auto;
+  }
+
+  h3 {
+    max-width: 25rem;
+    text-align: center;
+  }
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.75rem 0;
+
+  &__wrapper {
+    width: 990px;
+    overflow: hidden;
+  }
+
+  &__block {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    left: -1030px;
+  }
+
+  &__item {
+    display: flex;
+    width: 1030px;
+    gap: 1rem 90px;
+  }
+
+  &__btn {
+    &-left {
+      background: url(../img/icons/btn-arrow-left.svg) no-repeat center;
+    }
+    &-right {
+      background: url(../img/icons/btn-arrow-right.svg) no-repeat center;
+    }
+  }
+}
+
+.card-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  border-radius: 9px;
+  background-color: $color-light-s;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 300ms;
+
+  &__pet-image img {
+    max-width: unset;
+  }
+
+  &__pet-name {
+    @include georgia-r;
+    font-size: 1.25rem;
+    letter-spacing: 1.2px;
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-bottom: 1.875rem;
+    line-height: 1.06;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    left: -1030px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    left: -1030px;
+  }
+  100% {
+    left: -2060px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: $carousel-animation-duration;
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: $carousel-animation-duration;
+}
+
+@media (hover: hover) {
+  .pets {
+    &__btn:hover {
+      background-color: $color-primary-light;
+    }
+  }
+
+  .carousel {
+    &__btn:hover {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+
+  .card-carousel:hover {
+    background-color: $color-light-xl;
+
+    .card-carousel__btn {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .pets {
+    &__container {
+      max-width: 800px;
+    }
+
+    &__btn {
+      margin-top: 2.5rem;
+    }
+  }
+
+  .carousel {
+    &__wrapper {
+      width: 580px;
+    }
+
+    &__block {
+      left: -620px;
+    }
+
+    &__item {
+      width: 620px;
+      gap: 1rem 40px;
+    }
+  }
+
+  .card-carousel:nth-child(3) {
+    display: none;
+  }
+
+  @keyframes move-left {
+    0% {
+      left: -620px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes move-right {
+    0% {
+      left: -620px;
+    }
+    100% {
+      left: -1240px;
+    }
+  }
+}
+
+@include tablet-768 {
+  .pets {
+    &__container {
+      max-width: 500px;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    justify-content: center;
+    padding: 2.5rem 0 4.375rem 0;
+
+    &__wrapper {
+      width: 270px;
+    }
+
+    &__block {
+      left: -310px;
+    }
+
+    &__item {
+      width: 310px;
+      gap: 1rem 40px;
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 0;
+
+      &-left {
+        transform: translate(-160%, 0);
+        background: url(../img/icons/btn-arrow-left.svg) no-repeat center;
+      }
+      &-right {
+        transform: translate(160%, 0);
+        background: url(../img/icons/btn-arrow-right.svg) no-repeat center;
+      }
+    }
+  }
+
+  .card-carousel:nth-child(2) {
+    display: none;
+  }
+
+  @keyframes move-left {
+    0% {
+      left: -310px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes move-right {
+    0% {
+      left: -310px;
+    }
+    100% {
+      left: -620px;
+    }
+  }
+}
+
+@include mobile-500 {
+}
