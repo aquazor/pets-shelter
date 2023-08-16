@@ -2,7 +2,7 @@
 const petsArray = [
   {
     name: 'Jennifer',
-    img: '../../img/pets/pets-jennifer.jpg',
+    img: './img/pets/pets-jennifer.jpg',
     type: 'Dog',
     breed: 'Labrador',
     description:
@@ -15,7 +15,7 @@ const petsArray = [
   },
   {
     name: 'Sophia',
-    img: '../../img/pets/pets-sophia.jpg',
+    img: './img/pets/pets-sophia.jpg',
     type: 'Dog',
     breed: 'Shih tzu',
     description:
@@ -28,7 +28,7 @@ const petsArray = [
   },
   {
     name: 'Woody',
-    img: '../../img/pets/pets-woody.jpg',
+    img: './img/pets/pets-woody.jpg',
     type: 'Dog',
     breed: 'Golden Retriever',
     description:
@@ -41,7 +41,7 @@ const petsArray = [
   },
   {
     name: 'Scarlett',
-    img: '../../img/pets/pets-scarlet.jpg',
+    img: './img/pets/pets-scarlet.jpg',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
@@ -54,7 +54,7 @@ const petsArray = [
   },
   {
     name: 'Katrine',
-    img: '../../img/pets/pets-katrine.jpg',
+    img: './img/pets/pets-katrine.jpg',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -67,7 +67,7 @@ const petsArray = [
   },
   {
     name: 'Timmy',
-    img: '../../img/pets/pets-timmy.jpg',
+    img: './img/pets/pets-timmy.jpg',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -80,7 +80,7 @@ const petsArray = [
   },
   {
     name: 'Freddie',
-    img: '../../img/pets/pets-freddie.jpg',
+    img: './img/pets/pets-freddie.jpg',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -93,7 +93,7 @@ const petsArray = [
   },
   {
     name: 'Charly',
-    img: '../../img/pets/pets-charly.jpg',
+    img: './img/pets/pets-charly.jpg',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
