@@ -57,7 +57,19 @@
   overflow: hidden;
   transition: all 300ms;
 
+  &:focus-within,
+  &:active {
+    background-color: $color-light-xl;
+
+    .card-carousel__btn {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+
   &__pet-image img {
+    width: 270px;
+    height: 270px;
     max-width: unset;
   }
 

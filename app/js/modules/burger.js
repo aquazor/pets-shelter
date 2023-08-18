@@ -3,7 +3,6 @@ const BODY = document.body;
 const BURGER_BTN = document.querySelector('.header__burger-btn');
 const HEADER_NAVBAR = document.querySelector('.navbar-header__list');
 const HEADER_NAVBAR_LINKS = [...document.querySelectorAll('.navbar-header__item')];
-const laptopWidth = 1000;
 const timeout = 500;
 
 function addPadding() {
@@ -52,16 +51,13 @@ function toggleMenu() {
 }
 
 BURGER_BTN.addEventListener('click', toggleMenu);
+HEADER_NAVBAR.addEventListener('click', closeMenu);
 
-if (window.innerWidth <= laptopWidth) {
-  HEADER_NAVBAR.addEventListener('click', closeMenu);
-
-  if (HEADER_NAVBAR_LINKS.length > 0) {
-    HEADER_NAVBAR_LINKS.forEach((link) => {
-      if (link.classList.contains('link-active')) {
-        return;
-      }
-      link.addEventListener('click', closeMenu);
-    });
-  }
+if (HEADER_NAVBAR_LINKS.length > 0) {
+  HEADER_NAVBAR_LINKS.forEach((link) => {
+    if (link.classList.contains('link-active')) {
+      return;
+    }
+    link.addEventListener('click', closeMenu);
+  });
 }
