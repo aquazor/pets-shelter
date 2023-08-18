@@ -22,12 +22,11 @@ function moveRight() {
 BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight);
 
-const windowWidth = window.innerWidth;
 let cardCount;
 
-if (windowWidth > 1200) {
+if (window.innerWidth > 1200) {
   cardCount = 3;
-} else if (windowWidth <= 1200 && windowWidth > 768) {
+} else if (window.innerWidth <= 1200 && window.innerWidth > 768) {
   cardCount = 2;
 } else {
   cardCount = 1;

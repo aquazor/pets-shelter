@@ -4,14 +4,13 @@ const PAGINATION = document.querySelector('.pagination__block');
 const getRandomNumber = () => Math.ceil(Math.random() * 8);
 const findObjInArrayById = (arr, identifier) => arr.find((item) => item.id === identifier);
 
-const windowWidth = window.innerWidth;
 let cardCount;
 let pageCount;
 
-if (windowWidth > 1200) {
+if (window.innerWidth > 1200) {
   cardCount = 8;
   pageCount = 6;
-} else if (windowWidth <= 1200 && windowWidth > 768) {
+} else if (window.innerWidth <= 1200 && window.innerWidth > 768) {
   cardCount = 6;
   pageCount = 8;
 } else {
